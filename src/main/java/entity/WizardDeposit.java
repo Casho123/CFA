@@ -10,13 +10,6 @@ import java.time.LocalDateTime;
 @Table(name = "wizard_deposits")
 public class WizardDeposit extends BaseEntity {
 
-//                                   •	deposit_start_date – Date and time field
-//                                   •	deposit_amount – Floating point number field
-//                                   •	deposit_interest - Floating point number field
-//                                   •	deposit_charge - Floating point number field
-//                                   •	deposit_expiration_date – Date and time field
-//                                   •	is_deposit_expired – Boolean field
-
 
     private String firstName;
     private String lastName;
