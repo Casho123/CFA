@@ -2,7 +2,7 @@ package entity;
 
 import javax.persistence.*;
 
-@Entity
+
 @MappedSuperclass
 public abstract class BaseEntity {
 
