@@ -14,17 +14,17 @@ public class Main {
 
         entityManager.getTransaction().begin();
 
-        Sale sale = new Sale();
-        sale.setDate(Date.from(Instant.now()));
-
-        Product product = new Product();
-        product.setName("fdsdagdsasfass");
-        product.setPrice(BigDecimal.ONE);
-        product.setQuantity(10);
-        product.getSales().add(sale);
-        sale.setProduct(product);
-
-        entityManager.persist(product);
+//        Sale sale = new Sale();
+//        sale.setDate(Date.from(Instant.now()));
+//
+//        Product product = new Product();
+//        product.setName("fdsdagdsasfass");
+//        product.setPrice(BigDecimal.ONE);
+//        product.setQuantity(10);
+//        product.getSales().add(sale);
+//        sale.setProduct(product);
+//
+//        entityManager.persist(product);
 
 
         entityManager.getTransaction().commit();
