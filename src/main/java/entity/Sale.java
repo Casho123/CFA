@@ -1,6 +1,7 @@
 package entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -10,8 +11,8 @@ import java.util.Date;
 @Table(name = "sales")
 public class Sale extends BaseEntity {
 
-    private Product productId;
-    private Customer customerId;
+    private Product product;
+    private Customer customer;
     private StoreLocation storeLocation;
     private Date date;
 
@@ -19,20 +20,20 @@ public class Sale extends BaseEntity {
     }
 
     @ManyToOne
-    public Product getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setProductId(Product productId) {
-        this.productId = productId;
+    public void setProduct(Product product) {
+        this.product = product;
     }
     @ManyToOne
-    public Customer getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(Customer customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
     @ManyToOne
     public StoreLocation getStoreLocation() {
