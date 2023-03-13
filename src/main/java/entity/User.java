@@ -1,5 +1,6 @@
 package entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
@@ -11,7 +12,7 @@ public abstract class User extends BaseEntity {
 
     public User() {
     }
-
+    @Column(name = "first_name", nullable = false, length = 50)
     public String getFirstName() {
         return firstName;
     }
@@ -19,7 +20,7 @@ public abstract class User extends BaseEntity {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
+    @Column(name = "last_name", nullable = false, length = 50)
     public String getLastName() {
         return lastName;
     }
@@ -27,7 +28,7 @@ public abstract class User extends BaseEntity {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+    @Column(name = "phone_number", nullable = false, length = 50)
     public String getPhoneNumber() {
         return phoneNumber;
     }
