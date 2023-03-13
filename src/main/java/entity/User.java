@@ -1,10 +1,11 @@
 package entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-public abstract class User extends BaseEntity {
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "users")
+public class User extends BaseEntity {
 
     private String firstName;
     private String lastName;

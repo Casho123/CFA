@@ -1,9 +1,9 @@
 package entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "courses")
@@ -15,8 +15,12 @@ public class Course extends BaseEntity {
     private LocalDate startDate;
     private LocalDate endDate;
     private Integer credits;
+    private Set<Student> students;
+
+    private Teacher teacher;
 
     public Course() {
+        this.students = new HashSet<>();
     }
     @Column(nullable = false, length = 50)
     public String getName() {
@@ -57,5 +61,22 @@ public class Course extends BaseEntity {
 
     public void setCredits(Integer credits) {
         this.credits = credits;
+    }
+
+    @ManyToMany
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(Set<Student> students) {
+        this.students = students;
+    }
+    @ManyToOne
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 }
