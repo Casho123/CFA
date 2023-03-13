@@ -3,5 +3,36 @@ package entity;
 import javax.persistence.Entity;
 
 @Entity
-public abstract class User {
+public abstract class User extends BaseEntity {
+
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+
+    public User() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }
